@@ -14,11 +14,11 @@ public class Passwordchecker {
     }
 
     private static boolean checkSpecialChar(String password) {
-        return !password.matches(".*[()#$?!%/@]*.");
+        return !password.matches(".*[()#$?!%/@].*");
     }
 
     private static boolean checkNumUpperLower(String password) {
-        return !password.matches("(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])");
+        return !password.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(.*)$");
     }
 
     private static boolean checkThreeConsecutive(String password) {
