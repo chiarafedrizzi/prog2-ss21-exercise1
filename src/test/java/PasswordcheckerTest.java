@@ -21,6 +21,7 @@ public class PasswordcheckerTest {
         assertFalse(Passwordchecker.checkPassword(null));
     }
 
+    //tests if user entered a password that is empty
     @Test
     public void passwordEmpty(){
         String password = "";
