@@ -15,6 +15,18 @@ public class PasswordcheckerTest {
     Andere Sonderzeichen sind nicht erlaubt.
      */
 
+    //tests if user entered a password that is null
+    @Test
+    public void passwordNull(){
+        assertFalse(Passwordchecker.checkPassword(null));
+    }
+
+    @Test
+    public void passwordEmpty(){
+        String password = "";
+        assertFalse(Passwordchecker.checkPassword(password));
+    }
+
     //tests if user entered a password that is too short
     @Test
     public void passwordTooShort(){
